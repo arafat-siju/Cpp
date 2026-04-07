@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Person{
+    private:
+        int age;
+        string name;
+    public:
+        void set_age(int a){
+            age = a;
+        }
+// access private component by getter-setter method
+        int get_age(){
+            return age;
+        }
+    // change private components
+        void manipulate_age(bool);  // function prototype or signature
+};
+
+// defining function outside of class
+void Person::manipulate_age(bool flag) {
+    if(flag){
+        age ++ ;
+    }
+    else{
+        age -- ;
+    }
+}
+
+int main()
+{
+    Person p1;
+    int x = 232;
+
+    p1.set_age(50);
+
+    cout << p1.get_age() << endl;
+
+    p1.manipulate_age(true);
+
+    cout << p1.get_age() << endl;
+
+    return 0;
+}
