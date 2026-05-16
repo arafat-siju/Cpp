@@ -6,16 +6,13 @@ class Complex {
 public:
     Complex(int r = 0, int i = 0) : real(r), imag(i) { }
 
-    
     Complex operator+(const Complex& obj) const {
         return Complex(real + obj.real, imag + obj.imag);
     }
-
     
     Complex operator-(const Complex& obj) const {
         return Complex(real - obj.real, imag - obj.imag);
     }
-
     
     void output() const {
         cout << real << " + " << imag << "i" << endl;
@@ -31,7 +28,6 @@ int main() {
     C.output();
     
     cout << "A - B = ";
-    D.output();
-    
+    D.output();    
     return 0;
 }

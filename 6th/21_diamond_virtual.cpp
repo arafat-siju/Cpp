@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// CODE 10: Diamond Problem — Solved with Virtual Inheritance
+// 21: Diamond Problem — Solved with Virtual Inheritance
 //
 //        A
 //       / \
@@ -43,7 +43,7 @@ class D : public B, public C
 public:
     void showAll()
     {
-        data = 42; // Only ONE copy of A exists — no ambiguity
+        data = 42;
         showData();
         fromB();
         fromC();

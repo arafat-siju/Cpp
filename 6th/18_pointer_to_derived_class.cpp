@@ -3,12 +3,16 @@ using namespace std;
 
 class B {
 public:
-    void baseShow() { cout << "Base function" << endl; }
+    void baseShow() { 
+        cout << "Base function" << endl; 
+    }
 };
 
 class D : public B {
 public:
-    void derivedShow() { cout << "Derived function" << endl; }
+    void derivedShow() { 
+        cout << "Derived function" << endl; 
+    }
 };
 
 int main() {

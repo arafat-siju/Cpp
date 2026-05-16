@@ -5,7 +5,7 @@ class student {
 private:
     int roll;
 protected:
-    char sex;
+    char gender;
 public:
     void getRoll() {
         cout << "Enter roll: ";
@@ -22,14 +22,14 @@ private:
 public:
     void getMarks() {
         getRoll();
-        cout << "Enter sex: ";
-        cin >> sex;
+        cout << "Enter gender: ";
+        cin >> gender;
         cout << "Enter marks: ";
         cin >> marks;
     }
     void displayMarks() {
         displayRoll();
-        cout << "Sex: " << sex << endl;
+        cout << "Sex: " << gender << endl;
         cout << "Marks: " << marks << endl;
     }
 };
