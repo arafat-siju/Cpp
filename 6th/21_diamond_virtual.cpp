@@ -12,37 +12,32 @@ using namespace std;
 // Without virtual: D gets TWO copies of A → ambiguity!
 // With virtual:    D gets ONE shared copy of A → solved!
 
-class A
-{
+class A {
 public:
     int data;
     A() : data(0) {}
-    void showData() { 
-        cout << "Data from A: " << data << endl; 
+    void showData() {
+        cout << "Data from A: " << data << endl;
     }
 };
 
-class B : virtual public A
-{
+class B : virtual public A {
 public:
-    void fromB() { 
-        cout << "Reached A through B" << endl; 
+    void fromB() {
+        cout << "Reached A through B" << endl;
     }
 };
 
-class C : virtual public A
-{
+class C : virtual public A {
 public:
-    void fromC() { 
-        cout << "Reached A through C" << endl; 
+    void fromC() {
+        cout << "Reached A through C" << endl;
     }
 };
 
-class D : public B, public C
-{
+class D : public B, public C {
 public:
-    void showAll()
-    {
+    void showAll() {
         data = 42;
         showData();
         fromB();
